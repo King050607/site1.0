@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoAndalucía - Consumo Responsable</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>EcoAndalucía</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#valores">Nuestros Valores</a></li>
+        <li><a href="#productores">Productores</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Conecta Productores y Consumidores Responsables</h2>
+      <p>Descubre productos locales, éticos y sostenibles en Andalucía.</p>
+      <a href="#productores" class="btn-principal">Explorar Productores</a>
+    </div>
+  </section>
+
+  <section id="valores" class="section-container">
+    <h2 class="section-title">Nuestros Valores</h2>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <h3>Sostenibilidad</h3>
+        <p>Promovemos prácticas respetuosas con el medio ambiente.</p>
+      </div>
+      <div class="valor-card">
+        <h3>Calidad</h3>
+        <p>Conectamos consumidores con productos de alta calidad, locales y frescos.</p>
+      </div>
+      <div class="valor-card">
+        <h3>Transparencia</h3>
+        <p>Facilitamos la relación directa entre productores y consumidores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productores" class="section-container">
+    <h2 class="section-title">Nuestros Productores Locales</h2>
+    <div id="map"></div>
+    <div id="info-productores" class="productores-info">
+      <h3>Detalles del Productor</h3>
+      <p id="productor-nombre">Selecciona un productor para más información</p>
+      <p id="productor-descripcion"></p>
+      <ul id="productor-productos"></ul>
+      <button id="add-to-cart" class="btn-principal" style="display:none">Agregar al carrito</button>
+      <div id="chat">
+        <h3>Chat con el Productor</h3>
+        <div id="chat-history" class="chat-history"></div>
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Escribe tu mensaje..."
+          class="chat-input"
+        />
+        <button id="send-chat" class="chat-button">Enviar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrito" class="section-container">
+    <h2 class="section-title">Tu Carrito</h2>
+    <ul id="carrito-items" class="carrito-list"></ul>
+    <p id="total-precio"></p>
+  </section>
+
+  <section id="contacto" class="section-container">
+    <h2 class="section-title">Contacto</h2>
+    <p>¿Tienes preguntas? Escríbenos: contacto@ecoandalucia.com</p>
+    <p>Dirección: Calle Verde, 123, Sevilla, Andalucía</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EcoAndalucía. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
